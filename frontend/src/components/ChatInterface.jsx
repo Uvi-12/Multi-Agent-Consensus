@@ -67,7 +67,7 @@ export default function ChatInterface({
         return (
             <div className="chat-interface">
                 <div className="empty-state">
-                    <h1>Welcome to LLM Council <span className="plus-text">Plus</span></h1>
+                    <h1>Welcome to <span className="plus-text">Korum</span></h1>
                     <p className="hero-message">
                         The Council is ready to deliberate. <button className="config-link" onClick={() => onOpenSettings('council')}>Configure it</button>
                     </p>

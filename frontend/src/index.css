@@ -1,29 +1,31 @@
+
+
 :root {
   /* --- Council Chamber Theme (refined Midnight Glass) --- */
 
   /* Backgrounds */
-  --bg-dark: #0c1222;
-  --bg-darker: #060a12;
-  --bg-card: rgba(12, 18, 34, 0.72);
-  --bg-sidebar: rgba(8, 12, 22, 0.92);
+  --bg-dark: #000000;
+  --bg-darker: #010402;
+  --bg-card: rgba(0, 20, 15, 0.9);
+  --bg-sidebar: #010805;
 
   /* Text */
-  --text-primary: #f0f4f8;
-  --text-secondary: #9ca8b8;
+  --text-primary: #e0f2e0;
+  --text-secondary: #a0bca0;
   --text-muted: #5c6b7c;
 
   /* Accents */
-  --accent-primary: #3b82f6;
-  --accent-primary-dim: rgba(59, 130, 246, 0.25);
-  --accent-stage1: #22d3ee;
-  --accent-stage2: #f59e0b;
-  --accent-stage3: #10b981;
-  --accent-chairman: #fbbf24;
-  --accent-chairman-dim: rgba(251, 191, 36, 0.2);
+  --accent-primary: #bfff00;
+  --accent-primary-dim: rgba(191, 255, 0, 0.25);
+  --accent-stage1: #00ff9d;
+  --accent-stage2: #27ae60;
+  --accent-stage3: #00f2ff;
+  --accent-chairman: #00ff9d;
+  --accent-chairman-dim: rgba(0, 255, 157, 0.2);
 
   /* Borders */
-  --border-color: rgba(148, 163, 184, 0.08);
-  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-color: rgba(0, 242, 255, 0.2);
+  --border-glass: rgba(0, 242, 255, 0.3);
 
   /* Typography */
   --font-display: 'Syne', sans-serif;
@@ -33,7 +35,7 @@
 
   /* Shadows & glow */
   --shadow-glass: 0 12px 40px rgba(0, 0, 0, 0.35);
-  --shadow-glow-blue: 0 0 24px rgba(59, 130, 246, 0.2), 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-glow-blue: 0 0 24px rgba(191, 255, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.15);
   --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -42,11 +44,13 @@ body {
   font-family: var(--font-ui);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--bg-darker);
+  background-color: #000000;
+
   background-image:
-    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse 80% 50% at 100% 50%, rgba(34, 211, 238, 0.06) 0%, transparent 45%),
-    linear-gradient(180deg, #0c1222 0%, #0f172a 40%, #0a0f1a 100%);
+    radial-gradient(ellipse 100% 70% at 50% -10%, rgba(191, 255, 0, 0.08) 0%, transparent 60%),
+    radial-gradient(circle 850px at 50% 50%, rgba(0, 50, 25, 0.18) 0%, transparent 75%),
+    linear-gradient(180deg, #020a04 0%, #010401 45%, #000000 100%);
+
   background-attachment: fixed;
   color: var(--text-primary);
   height: 100vh;
@@ -165,4 +169,23 @@ body::after {
 /* Global Button Reset */
 button {
   font-family: var(--font-ui);
+}
+
+h1 span, .sidebar-title {
+  color: #bfff00 !important;
+  -webkit-text-fill-color: #bfff00 !important;
+  text-shadow: 0 0 10px rgba(191, 255, 0, 0.3);
+  box-shadow: inset 0 0 10px rgba(191, 255, 0, 0.05), 0 4px 15px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+}
+
+/* Styling Member Labels and Metadata */
+.member-label,
+.conversation-meta,
+.sidebar-version {
+  color: #ffcc00 !important; /* Cyber Amber/Yellow */
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  opacity: 1 !important; /* Ensure they are bright and readable */
 }
